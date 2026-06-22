@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中彩网 · 常回常新</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f0f2f5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1f2a3a;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .page {
+            max-width: 980px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        /* Hero 区 — 温和留白，不喧哗 */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1f2a3a;
+            margin-bottom: 0.6rem;
+        }
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #5b6c7e;
+            max-width: 580px;
+            margin: 0 auto;
+            border-top: 1px solid #d8dee5;
+            padding-top: 1rem;
+        }
+        /* 卡片体系 — 浅灰底、细边框、柔和阴影 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e6ec;
+            border-radius: 20px;
+            padding: 1.8rem 2.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease;
+        }
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1f2a3a;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #eef1f5;
+        }
+        .card p {
+            margin-bottom: 0.75rem;
+            color: #2c3d50;
+        }
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0.2rem 0;
+        }
+        .feature-list li {
+            padding: 0.35rem 0 0.35rem 1.5rem;
+            position: relative;
+            color: #2c3d50;
+        }
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            font-weight: 700;
+            color: #7e8c9e;
+        }
+        .insight-box {
+            background: #f7f9fb;
+            border-left: 4px solid #b8c5d4;
+            padding: 0.9rem 1.4rem;
+            margin: 1rem 0 0.2rem 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.97rem;
+        }
+        .insight-box p {
+            margin-bottom: 0.3rem;
+        }
+        .faq-item {
+            margin-bottom: 0.8rem;
+        }
+        .faq-item strong {
+            display: inline-block;
+            font-weight: 550;
+            color: #1f2a3a;
+        }
+        .faq-item p {
+            margin: 0.15rem 0 0 0.8rem;
+            color: #3f4e60;
+        }
+        .cta-sentence {
+            background: #ffffff;
+            border: 1px solid #dce2ea;
+            border-radius: 40px;
+            padding: 1.2rem 2rem;
+            margin: 2rem 0 0.8rem 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            font-size: 1.1rem;
+        }
+        .cta-sentence a {
+            color: #1a4b7a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #b8cce0;
+            padding-bottom: 1px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .cta-sentence a:hover {
+            color: #0e3557;
+            border-bottom-color: #0e3557;
+        }
+        .footer-note {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #7b8a9e;
+            border-top: 1px solid #dce2ea;
+            padding-top: 1.6rem;
+        }
+        .footer-note span {
+            display: inline-block;
+            margin: 0 0.6rem;
+        }
+        /* 响应式 */
+        @media (max-width: 640px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .card {
+                padding: 1.4rem 1.2rem;
+                border-radius: 16px;
+            }
+            .card h2 {
+                font-size: 1.3rem;
+            }
+            .cta-sentence {
+                padding: 1rem 1.2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- Hero -->
+    <div class="hero">
+        <h1>中彩网 · 常回常新</h1>
+        <div class="sub">每一次造访，都像与老朋友坐下来聊聊天——信息在流动，视角在更新。</div>
+    </div>
+
+    <div class="card-grid">
+        <!-- 摘要卡片：从再次访问切入 -->
+        <div class="card">
+            <h2>收藏夹里的安静坐标</h2>
+            <p>我们可能很久没有打开一个书签，但总有一些站点值得反复回去。<a href="https://com-zhcw.com" style="color:#1a4b7a; text-decoration: none; border-bottom: 1px solid #b8cce0;">中彩网</a>便是这样一个地方——不喧闹、不催促，只是安静地提供围绕彩票资讯与数据的持续内容。无论是抽空看一眼最新动态，还是回顾历史信息，它都在那里，结构清晰，加载轻盈。</p>
+            <p>把链接留在收藏夹里，不是因为它需要频繁访问，而是当你想起时，它总能给出恰好的回应。</p>
+        </div>
+
+        <!-- 亮点卡片：信息价值 & 使用节奏 -->
+        <div class="card">
+            <h2>亮点 · 日常信息伙伴</h2>
+            <ul class="feature-list">
+                <li><strong>资讯聚合</strong> — 覆盖多种彩票类型的基础信息、开奖节奏与相关解读，帮你快速建立全局感。</li>
+                <li><strong>数据呈现</strong> — 历史号码、走势图表以简洁方式排列，适合个人对照和安静研究。</li>
+                <li><strong>低干扰阅读</strong> — 页面以信息为主，减少弹窗与诱导性设计，专注你想看的内容。</li>
+                <li><strong>长期可访问</strong> — 无需注册或登录即可浏览大部分内容，降低使用门槛。</li>
+            </ul>
+            <div class="insight-box">
+                <p>💡 使用建议：不必每日紧盯，将<a href="https://com-zhcw.com" style="color:#1a4b7a; text-decoration: none; border-bottom: 1px solid #b8cce0;">中彩网</a>视为一个周期性的信息节点——每周固定时间打开，结合自己的记录做简单对照，节奏比频率更重要。</p>
+            </div>
+        </div>
+
+        <!-- 场景卡片：何时想起它 -->
+        <div class="card">
+            <h2>适合这样想起它</h2>
+            <p>傍晚翻看手机时、周末整理桌面时、或者只是对某组数字产生好奇时——这些轻量的时刻，恰好适合打开一个熟悉但不会带来压力的站点。</p>
+            <p>它不强求你停留很久，但如果你愿意，也能从中发现一些规律或趋势。信息本身是中性的，而解读的乐趣在于你自己。</p>
+            <p>一个值得收藏的页面，往往是在你真正需要时才意识到它的价值。<a href="https://com-zhcw.com" style="color:#1a4b7a; text-decoration: none; border-bottom: 1px solid #b8cce0;">中彩网</a>正是这类存在：不抢眼，但可靠。</p>
+        </div>
+
+        <!-- FAQ 摘要卡片：理性与边界 -->
+        <div class="card">
+            <h2>一些朴素提醒</h2>
+            <div class="faq-item">
+                <strong>Q：这个网站是官方平台吗？</strong>
+                <p>它提供彩票相关信息，但请留意：任何彩票类站点都应作为参考工具使用，而非决策依赖。请始终以各地彩票机构官方公告为准。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q：应该如何理解开奖数据？</strong>
+                <p>数字是随机的，历史走势无法预测未来。享受分析过程的趣味，但保持理性边界，不投入超出自己承受能力的关注或资金。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q：可以长期收藏使用吗？</strong>
+                <p>可以。它适合作为信息渠道之一，放在浏览器的书签文件夹里，偶尔点开，持续关注，但不必抱有过高期待——它只是一个安静的信息角落。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 自然嵌入主链接的句子卡片（非硬广，符合语气） -->
+    <div class="cta-sentence">
+        📌 如果你还没有把它加入收藏，现在可以试试：<a href="https://com-zhcw.com">中彩网</a> —— 一个值得反复回看的信息角落。
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        <span>温和 · 克制 · 常回常新</span>
+        <span>|</span>
+        <span>理性参与，量力而行</span>
+    </div>
+</div>
+</body>
+</html>
